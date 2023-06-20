@@ -196,3 +196,57 @@ console.log(kristynsCloset.indexOf('yellow knit hat'));
 kristynsCloset.splice(6, 0, 'raybans');
 console.log(kristynsCloset);
 kristynsCloset[5] = 'stained knit hat';
+thomsCloset[0][0];
+thomsCloset[1][1];
+thomsCloset[2][1];
+console.log("Thom is looking fierce in a " + thomsCloset[0][0] + ", " + thomsCloset[1][1] + " and " + thomsCloset[2][1] + "!")
+thomsCloset[1][2] = 'Footie Pajamas'
+console.log(thomsCloset[1][2])
+
+// IV. Functions
+
+//A. I'm glad you think I can print a greeting. 
+
+//B. 
+function printCool(name){
+    console.log(name + " is cool.")
+}
+printCool("Reynolds")
+
+// C. 
+
+function calculateCube(number){
+    console.log(number ** 3 )
+}
+calculateCube(5)
+
+// D. 
+function isVowel(string){
+    string = string.toUpperCase();
+    let vowels = ['A', 'E', 'I', 'O', 'U'];
+    return vowels.includes(string)
+}
+console.log(isVowel('a'))
+
+// E. 
+function getTwoLengths(string1, string2){
+    return [string1.length, string2.length]
+}
+console.log(getTwoLengths('testing', 'string'))
+
+// F. 
+function getMultipleLengths(string){
+    let arr = []
+    for(let item of string) {
+        arr.push(item.length)
+    }
+    return arr
+}
+console.log(getMultipleLengths(["hello", "what", "is", "up"]))
+
+// G. 
+function maxOfThree(num1, num2, num3){
+//    return Math.max(num1, num2, num3);
+    if ()
+}
+maxOfThree
