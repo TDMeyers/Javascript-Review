@@ -247,6 +247,12 @@ console.log(getMultipleLengths(["hello", "what", "is", "up"]))
 // G. 
 function maxOfThree(num1, num2, num3){
 //    return Math.max(num1, num2, num3);
-    if ()
+    if (num1 >= num2 && num1 >= num3){
+        return num1
+    } else if (num2 >= num1 && num2 >= num3){
+        return num2
+    } else {
+        return num3
+    }
 }
-maxOfThree
+console.log(maxOfThree(40, 7, 15))
