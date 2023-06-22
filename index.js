@@ -256,3 +256,121 @@ function maxOfThree(num1, num2, num3){
     }
 }
 console.log(maxOfThree(40, 7, 15))
+
+// H. 
+
+function printLongestWord(array){
+    let arr = [];
+    let longestWord = array[0];
+    for (let item of array){
+        if(longestWord.length < item.length){
+            longestWord = item 
+        }
+    }
+    return longestWord 
+}
+console.log(printLongestWord(["hello", "what", "is", "up", "asdklfjak;sdfja;kslfjaskl;dfj"]))
+
+// Objects
+
+// A. Make a user Object
+
+const user = {
+    name: "Bob",
+    email: "bob@email.com",
+    age: 43,
+    purchased: [],
+};
+
+// B. Update the User
+
+user.email = "bobsemail@outlook.com";
+user.age++;
+
+console.log(user.email, user.age);
+
+// C. Adding Keys and Values
+
+user:location = 'Denver';
+
+// D. Shopaholic ! 
+
+user.purchased.push('carbohydrates');
+user.purchased.push('peace of mind');
+user.purchased.push('Merino jodhpurs');
+console.log(user.purchased);
+console.log(user.purchased[2]);
+
+// E. Object-within-object
+
+user.friend = {
+    name: 'grace hopper',
+    age: 85,
+    purchased: [],
+    location: 'Greeley'
+};
+
+console.log(user.friend.name);
+console.log(user.friend.location);
+
+user.friend.age = 55;
+
+user.friend.purchased.push('The One Ring', 'a latte');
+
+console.log(user.friend.purchased[1]);
+
+// F. Loops
+
+for(let i of user.purchased){
+    console.log(i);
+};
+
+// G. Functions can operate on objects
+
+function updateUser(){
+    user.age++;
+    user.name = user.name.toUpperCase();
+}
+
+updateUser(user.friend);
+console.log(user);
+
+function oldAndLoud(person){
+    person.age++;
+    person.name = person.name.toUpperCase();
+};
+oldAndLoud(user.friend);
+console.log(user.friend);
+
+// Cat Combinator
+
+// 1. Mama cat 
+
+const cat1 = {
+    name: 'Mama cat',
+    breed: 'Calico',
+    age: 97,
+};
+console.log(cat1.age);
+console.log(cat1.breed);
+
+const cat2 = {
+    name: 'Papa cat',
+    breed: 'Minx',
+    age: 87,
+};
+console.log(cat2.age);
+console.log(cat2.breed);
+
+// 3. Combine Cats ! 
+
+function combineCats(mama, papa){
+    console.log(cat1, cat2);
+    return {name: mama.name + papa.name, age: 1, breed: mama.breed + '-' + papa.breed}
+};
+
+console.log(combineCats(cat1, cat2));
+
+// 4. Cat brain bender
+
+console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)),combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)));
